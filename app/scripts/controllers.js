@@ -60,8 +60,6 @@ angular.module('bikes')
 
     self.addBike = function() {
 
-        console.log(self.mybike);
-
         self.bikes.push(self.mybike);
         location.href = "/bike_garage/app/#";
 

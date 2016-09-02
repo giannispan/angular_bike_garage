@@ -9,7 +9,7 @@ angular.module('bikes')
 
 }])
 
-.controller('BikeDetailController', ['$stateParams', 'bikeFactory', '$location', function($stateParams, bikeFactory, $location) {
+.controller('BikeDetailController', ['$state','$stateParams', 'bikeFactory', '$location', function($state, $stateParams, bikeFactory, $location) {
 
     var self = this;
     var bike = bikeFactory.getBike(parseInt($stateParams.id, 10));
@@ -26,7 +26,8 @@ angular.module('bikes')
             category: bike.category,
             year: bike.year
         };
-        location.href = "/bike_garage/app/#";
+        //location.href = "/bike_garage/app/#";
+        $state.go('app');
     }
 
     //delete bike
@@ -35,13 +36,14 @@ angular.module('bikes')
             return item._id === bike._id;
 
         });
-        location.href = "/bike_garage/app/#";
+        //location.href = "/bike_garage/app/#";
+        $state.go('app');
     };
 
 }])
 
 
-.controller('AddBikeController', ['bikeFactory', '$location', function(bikeFactory, $location) {
+.controller('AddBikeController', ['$state','bikeFactory', '$location', function($state, bikeFactory, $location) {
 
     var self = this;
     self.bike = [];
@@ -61,7 +63,8 @@ angular.module('bikes')
     self.addBike = function() {
 
         self.bikes.push(self.mybike);
-        location.href = "/bike_garage/app/#";
+        $state.go('app');
+        //location.href = "/bike_garage/app/#";
 
         self.mybike = { _id: self.maxId(self.bikes) + 1, model: "", brand: "", image: "", category: "", year: "" };
     }

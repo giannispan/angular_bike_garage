@@ -1,20 +1,19 @@
-    <div class="container">
-        <div class="row row-content">
-            <div class="col-xs-12">
-              <div class="tab-content">
+<div class="container">
+    <div class="row row-content">
+        <div class="col-xs-12">
+            <div class="tab-content">
                 <ul class="media-list tab-pane fade in active">
-                <li class="media" ng-repeat="bike in vm.bikes">
-                    <div class="media-left media-middle">
-                        <a ui-sref="app.bikedetails({id: bike._id})">
-                        <img class="media-object img-thumbnail"
-                         ng-src={{bike.image}} alt="Bike">
-                        </a>
-                    </div>
-                    <div class="media-body">                       
-                    </div>
-                </li>
+                    <li class="media" ng-repeat="bike in vm.bikes">
+                        <div class="media-left media-middle">
+                            <a ui-sref="app.bikedetails({id: bike._id})">
+                                <img class="media-object img-thumbnail" ng-src={{bike.image}} alt="Bike">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                        </div>
+                    </li>
                 </ul>
-              </div>
-          </div>
+            </div>
         </div>
     </div>
+</div>

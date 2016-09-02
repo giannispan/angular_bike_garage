@@ -1,37 +1,36 @@
-    <div class="container">
-      <div class="row row-content">
+<div class="container">
+    <div class="row row-content">
         <div class="col-xs-12">
-          <div class="media">
-            <div class="media-left">
-                <a href="#">
-                  <img id="mybike" src="images/default.jpg" name="image" class="media-object img-thumbnail" ng-storage="mybike.image" alt="Bike">
-                  <canvas id="myCanvas" />
-                </a> 
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img id="mybike" src="images/default.jpg" name="image" class="media-object img-thumbnail" ng-storage="mybike.image" alt="Bike">
+                        <canvas id="myCanvas" />
+                    </a>
+                </div>
+                <div class="media-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Model:</label>
+                            <input type="text" class="form-control" name="model" value="" ng-model="vm.mybike.model" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Brand:</label>
+                            <input type="text" class="form-control" name="brand" value="" ng-model="vm.mybike.brand" />
+                        </div>
+                        <div class="form-group">
+                            <label>Category:</label>
+                            <input type="text" class="form-control" name="category" value="" ng-model="vm.mybike.category" />
+                        </div>
+                        <div class="form-group">
+                            <label>Year:</label>
+                            <input type="text" class="form-control" name="year" value="" ng-model="vm.mybike.year" />
+                        </div>
+                        <button type="submit" class="btn btn-primary" ng-click="vm.addBike()">Add</button>
+                        <button type="button" class="btn btn-default" ui-sref="app">Back to my Garage</button>
+                    </form>
+                </div>
             </div>
-            <div class="media-body">
-              <form>
-                <div class="form-group">
-                  <label>Model:</label>
-                  <input type="text" class="form-control" name="model" value="" ng-model="vm.mybike.model" required />
-                </div>
-                <div class="form-group">
-                  <label>Brand:</label>
-                  <input type="text" class="form-control" name="brand" value="" ng-model="vm.mybike.brand" />
-                </div>
-                <div class="form-group">
-                  <label>Category:</label>
-                  <input type="text" class="form-control" name="category" value="" ng-model="vm.mybike.category" />
-                </div>
-                <div class="form-group">
-                  <label>Year:</label>
-                  <input type="text" class="form-control" name="year" value="" ng-model="vm.mybike.year" />
-                </div>
-                <button type="submit" class="btn btn-primary" ng-click="vm.addBike()">Add</button>
-                <button type="button" class="btn btn-default" ui-sref="app">Back to my Garage</button>
-              </form>                
-            </div>
-          </div>     
         </div>
-      </div>
     </div>
-
+</div>

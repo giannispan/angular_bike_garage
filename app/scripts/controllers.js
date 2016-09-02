@@ -17,7 +17,7 @@ angular.module('bikes')
             self.bike = bike;
             self.bikes= bikeFactory.getBikes();
 
-            // add or update bike
+            // update bike
             self.updateBike = function (item) {
                 bike = {
                _id: bike._id,
